@@ -16,10 +16,18 @@ The I-gain is therefore chosen to be zero.
 
 ### PD Tuning
 
-Using only a P-controller either leads to overshooting the target point and subsequent oscillations or to never reaching the target point at all.
-Using only a D-controller does not make sense at all, as this controller would only react on changes in the error signal but never care for the actual value of the error signal. 
+Using only a P-controller either leads to overshooting the target point and subsequent oscillations or to never reaching the target point at all. Admittedly the P-gain value can be tuned to give a somewhat acceptable tracking performance, but the result is not really a desirable vehicle behavior:
 
-The combination of P- and D-
+--image--
+
+Using only a D-controller does not make sense at all, as this controller will only react on changes in the error but never care for the actual value of the error signal. 
+
+--image--
+
+Using a PD-controller on the other hand can result in quite good target tracking performance.
+The D-component is used to ease the overshoot of the P-component by counteracting very sudden changes in the error signal:
+
+--image--
 
 
 
