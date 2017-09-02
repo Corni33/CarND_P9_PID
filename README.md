@@ -30,6 +30,7 @@ While I was able to slowly follow the test track, the vehicle was overshooting t
 I therefore could not increase the velocity very much, without the vehicle leaving the track due to wild oscillations.
 
 I then added a D-term to the controller.
+This term is used to counteract the overshoot and oscillations induced by the pure P-controller by considering how fast the error is changing and influencing the controller output accordingly.
 After some further parameter tuning the vehicle was now able to follow the road much more smoothly and with higher velocity.
 
 In the end I settled for the values 0.15 as P-gain and 3.0 as D-gain values of my PD-controller.
