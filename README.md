@@ -49,7 +49,7 @@ A solution for this problem might be to extend the twiddle quality measure by so
 
 The following plot shows a comparison of the CTE values for the manually tuned PD-controller and the one optimized using twiddle:
 
- --- image --- cte.png
+![CTE](./cte.png "CTE")
  
  It can be seen that in the beginning the twiddle controller reaches the middle of the road (i.e. CTE=0) faster because of its bigger P-gain value.
  The smaller RMSE value of the twiddle controller can also be recognized by looking at the area between the x-axis and the CTE curves.
