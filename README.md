@@ -19,7 +19,7 @@ The I-gain is therefore chosen to be zero.
 
 ## PD Tuning
 
-My original goal was to manually find some initial values for the P- and D-gains and subsequently search for better values using optimization.
+My goal was to manually find some initial values for the P- and D-gains and subsequently search for better values using optimization.
 I therefore implemented the twiddle algorithm from the lecture to perform this optimization automatically. 
 
 
@@ -40,7 +40,7 @@ In the end I settled for the values 0.15 as P-gain and 3.0 as D-gain values of m
 Starting from the above values I used twiddle to further optimize the vehicle controller.
 As a quality measure for twiddle I used the RMSE of the CTE over 3000 steps of the simulation starting from step 800.
 The algorithm was able to decrease the RMSE value quite a bit and in the end (i.e. when the gain values were not being changed much anymore) settled for 0.24 as P-gain and 3.2 as D-gain value.
-While the RMSE using these controller parameters was indeed smaller, I noticed that the vehicle was subjectively oscillating more and genereally seemed to be not as stable as before.
+While the RMSE using these controller parameters was indeed smaller, I noticed that the vehicle was subjectively oscillating a bit more and genereally seemed to be not as stable as before.
 
 This phenomenon can be explained by looking at the quality measure that was used for twiddle.
 It seems that only using the RMSE of the CTE might not be the best choice for achieving the best vehicle behavior.
@@ -51,8 +51,8 @@ The following plot shows a comparison of the CTE values for the manually tuned P
 
 ![CTE](./cte.png "CTE")
  
- It can be seen that in the beginning the twiddle controller reaches the middle of the road (i.e. CTE=0) faster because of its bigger P-gain value.
- The smaller RMSE value of the twiddle controller can also be recognized by looking at the area between the x-axis and the CTE curves.
+It can be seen that in the beginning the twiddle controller reaches the middle of the road (i.e. CTE=0) faster because of its bigger P-gain value.
+The smaller RMSE value of the twiddle controller can also be recognized by looking at the area between the x-axis and the CTE curves.
  
  
 
