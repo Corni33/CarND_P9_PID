@@ -38,7 +38,7 @@ In the end I settled for the values 0.15 as P-gain and 3.0 as D-gain values of m
 
 ### Parameter Optimization 
 
-Starting from the above values I used twiddle to further optimize the vehicle controller.
+Starting from the values above I used twiddle to further optimize the vehicle controller.
 As a quality measure for twiddle I used the RMSE of the CTE over 3000 steps of the simulation starting from step 800.
 The algorithm was able to decrease the RMSE value quite a bit and in the end (i.e. when the gain values were not being changed much anymore) settled for 0.24 as P-gain and 3.2 as D-gain value.
 While the RMSE using these controller parameters was indeed smaller, I noticed that the vehicle was subjectively oscillating a bit more and genereally seemed to be not as stable as before.
